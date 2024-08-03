@@ -19,3 +19,10 @@ fetch('https://dummyjson.com/products/'+id)
 	Loading...
 	{/if}
 </div>
+
+
+<button on:click={() => {
+  selectedProduct = { title: product.title, price: product.price };
+}}>Save Product</button>
+
+
