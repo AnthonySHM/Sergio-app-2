@@ -8,6 +8,12 @@ fetch('https://dummyjson.com/products/'+id)
 .then(res => res.json())
 .then(res => product = res);
 
+let selectedProduct = null;
+
+function selectProduct() {
+    selectedProduct = { title: product.title, price: product.price } ;
+  }
+
 </script>
 
 <div class="container mt-2">
@@ -21,8 +27,6 @@ fetch('https://dummyjson.com/products/'+id)
 </div>
 
 
-<button on:click={() => {
-  selectedProduct = { title: product.title, price: product.price };
-}}>Save Product</button>
+<button on:click={selectProduct}>Select Product</button>
 
 
