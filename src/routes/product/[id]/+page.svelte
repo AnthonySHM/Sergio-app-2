@@ -1,6 +1,8 @@
 <script lang="ts">
 import { page } from '$app/stores';
-    import ProductCard from '$lib/ProductCard.svelte';
+import ProductCard from '$lib/ProductCard.svelte';
+import CartItems from .....
+
 let id = $page.params.id
 let product:Product|undefined = $state(undefined)
 
@@ -11,7 +13,7 @@ fetch('https://dummyjson.com/products/'+id)
 let selectedProduct = null;
 
 function selectProduct() {
-    selectedProduct = { title: product.title, price: product.price } ;
+    cartItems = { title: product.title, price: product.price } ;
   }
 
 </script>
@@ -28,5 +30,4 @@ function selectProduct() {
 
 
 <button on:click={selectProduct}>Select Product</button>
-
 
