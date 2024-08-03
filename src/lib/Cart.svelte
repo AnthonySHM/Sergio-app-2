@@ -1,5 +1,5 @@
 <script Lang="ts">
- export let cartItems = [];
+export let cartItems = [];
 <script>
 
 <div class="dropdown">
